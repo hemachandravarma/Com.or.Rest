@@ -1,0 +1,30 @@
+Scenario 1: Get Existing posts 
+Response URI:https://jsonplaceholder.typicode.com/posts
+HTTP Method: GET
+StatusCode: 200
+Response body fields in JSON: id, title,body,userId
+Existing body field in json 1 to 100
+Existing "id" values in posts are 1 to 100
+
+Scenario 2: Create a new posts 
+Response URI:https://jsonplaceholder.typicode.com/posts
+HTTP Method: post
+StatusCode: 201
+Request body parameters in JSON: id, title,body,userId
+Response body fields in JSON: title, body, userId
+
+Scenario 3: Deleting an existing post 
+Response URI:https://jsonplaceholder.typicode.com/posts
+Path parameter: id
+HTTP Method: Delete 
+StatusCode: 200
+Response body fields in JSON: Message 
+
+Scenario 4: Updating an existing body 
+Response URI:https://jsonplaceholder.typicode.com/posts
+Path parameter: id
+Request body parameters in JSON: title,body,userId
+HTTP Method: put
+StatusCode: 200 for valid 400 for invalid, 404 for wrong path parameter
+Response body fields in JSON: id, title,body,userId
+
